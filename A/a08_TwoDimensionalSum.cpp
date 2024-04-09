@@ -35,18 +35,18 @@ int main()
 			cum[i][j] += cum[i - 1][j];
 		}
 	}
-	for (int i = 1; i <= H; i++)
-	{
-		for (int j = 1; j <= W; j++)
-		{
-			cout << cum[i][j];
-		}
-		cout << endl;
-	}
+	// for (int i = 1; i <= H; i++)
+	// {
+	// 	for (int j = 1; j <= W; j++)
+	// 	{
+	// 		cout << cum[i][j];
+	// 	}
+	// 	cout << endl;
+	// }
 	for (int i = 1; i <= Q; i++)
 	{
 		int sum = 0;
-		sum = cum[C[i]][D[i]] - cum[A[i]][B[i] - 1] - cum[A[i] - 1][B[i]] + cum[A[i] - 1][B[i] - 1];
+		sum = cum[C[i]][D[i]] - cum[C[i]][B[i] - 1] - cum[A[i] - 1][D[i]] + cum[A[i] - 1][B[i] - 1];
 		cout << sum << endl;
 	}
 	return 0;
