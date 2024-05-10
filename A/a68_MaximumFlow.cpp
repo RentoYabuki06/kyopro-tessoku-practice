@@ -16,7 +16,7 @@ public:
 	bool used[409];
 	vector<Edge> Graph[409];
 
-	// 頂点N個の残余グラフの作成
+	// 頂点N個の残余グラフの作成o
 	void	ft_init(int N)
 	{
 		size_ = N;
