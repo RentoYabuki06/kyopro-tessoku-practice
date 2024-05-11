@@ -5,9 +5,9 @@
 using namespace std;
 
 struct Edge{
-	int to;
-	int cap;
-	int rev;
+	int to;		// 行き先
+	int cap;	// 容量
+	int rev;	// 逆辺の位置
 };
 
 class MaximumFlow{
@@ -16,7 +16,8 @@ public:
 	bool used[409];
 	vector<Edge> Graph[409];
 
-	// 頂点N個の残余グラフの作成o
+	// 頂点N個の残余グラフの作成
+	// clear()ですべての要素を削除（初期化）
 	void	ft_init(int N)
 	{
 		size_ = N;
@@ -28,28 +29,22 @@ public:
 	{
 		int Current_size_a = Graph[a].size();
 		int Current_size_b = Graph[b].size();
-		Graph[a].push_back(Edge{b, c, Current_size_b});
-		Graph[b].push_back(Edge{a, 0, Current_size_a});
+		Graph[a].push_back(Edge{b, c, Current_size_b});	// 向かいの辺の位置は現状の辺の格納数に依存する
+		Graph[b].push_back(Edge{a, 0, Current_size_a});	// 逆方向には流量0で設定
 	}
 
-	// 深さ優先探索
-	// Fはスタートからposに達するまでの残余グラフの辺の要領の最大値
+	// 深さ優先探索（deep first search）、再帰関数でもある
 	// 返り値は流したフローの値（流せない場合は0）
-	int dfs(int pos, int goal, int F)
-	{
-		// ゴールに到達：フローを流せる！
-		if (pos == goal) return F;
+	int dfs(int pos, int goal, int F)	// Fはスタートからposに達するまでの「残余グラフの辺の容量」の最大値
+	{	
+		if (pos == goal) return F;	// ゴールに到達：フローを流せる！
 		used[pos] = true;
-		for (int i = 0; i < Graph[pos].size(); i++)
+		for (int i = 0; i < Graph[pos].size(); i++)	// 現在位置(pos)から出ている辺の数だけ探索
 		{
-			// 容量0の辺は使えない
-			if (Graph[pos][i].cap == 0) continue;
-			// すでに訪問した頂点に行っても意味がない
-			if (used[Graph[pos][i].to] == true) continue;
-			// 目的地までのパスを探す
-			int flow = dfs(Graph[pos][i].to, goal, min(F, Graph[pos][i].cap));
-			// フローを流せる場合、残余グラフの容量をFlowだけ増減させる
-			if (flow >= 1)
+			if (Graph[pos][i].cap == 0) continue;								// 容量0の辺は使えない
+			if (used[Graph[pos][i].to] == true) continue;						// すでに訪問した頂点に行っても意味がない
+			int flow = dfs(Graph[pos][i].to, goal, min(F, Graph[pos][i].cap));	// 目的地までのパスを探す（次の行き先、ゴール、最小容量の更新）
+			if (flow >= 1)														// フローを流せる場合、残余グラフの容量をFlowだけ増減させる
 			{
 				Graph[pos][i].cap -= flow;
 				Graph[Graph[pos][i].to][Graph[pos][i].rev].cap += flow;
@@ -66,9 +61,8 @@ public:
 		int total_flow = 0;
 		while (true)
 		{
-			for (int i = 0; i <= size_; i++) used[i] = false;
+			for (int i = 0; i <= size_; i++) used[i] = false;	// すべての場所を未訪問にする
 			int F = dfs(s, t, 1000000000);
-
 			// フローを流せなくなったら操作終了
 			if (F == 0) break;
 			total_flow += F;
@@ -88,9 +82,9 @@ int main()
 	cin >> N >> M;
 	for (int i = 1; i <= M; i++) cin >> A[i] >> B[i] >> C[i];
 
-	// 辺を追加
+	// N個の頂点を準備
 	Z.ft_init(N);
-
+	// M本の辺を追加
 	for (int i = 1; i <= M; i++) Z.ft_add_edge(A[i], B[i], C[i]);
 
 	// 出力
