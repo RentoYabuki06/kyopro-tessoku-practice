@@ -91,7 +91,7 @@ int main()
 	// M本の辺を追加
 	for (int i = 1; i <= N; i++) Z.ft_add_edge(N + 1, i, 150 - P[i]);	// スタートからは「選ぶ」コストを追加
 	for (int i = 1; i <= N; i++) Z.ft_add_edge(i, N + 2, 150);		// ゴールへは「選ばない」コストを追加
-	for (int i = 1; i <= M; i++) Z.ft_add_edge(A[i], B[i], 2000000);	// A[i]を選んだのにB[i]を選ばなかったら罰金として200ポインお
+	for (int i = 1; i <= M; i++) Z.ft_add_edge(B[i], A[i], 2000000);	// A[i]を選んだのにB[i]を選ばなかったら罰金として200ポインお
 
 	// 出力
 	total_profit -= Z.max_flow(N + 1, N + 2);
