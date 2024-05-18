@@ -34,14 +34,6 @@ int main()
 			dots[i][j] += dots[i - 1][j];
 		}
 	}
-	// for (int i = 1; i <= Q; i++)
-	// {
-	// 	for (int j = 1; j <= Q; j++)
-	// 	{
-	// 		cout << dots[i][j];
-	// 	}
-	// 	cout << endl;
-	// }
 	for (int i = 1; i <= Q; i++)
 	{
 		int sum = dots[c[i]][d[i]] - dots[c[i]][b[i] - 1] - dots[a[i] - 1][d[i]] + dots[a[i] - 1][b[i] - 1];
