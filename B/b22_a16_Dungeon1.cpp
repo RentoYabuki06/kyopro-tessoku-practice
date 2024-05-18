@@ -18,8 +18,6 @@ int main()
 		dp[i + 1] = min(dp[i] + A[i + 1] , dp[i + 1]);
 		dp[i + 2] = min(dp[i] + B[i + 2], dp[i + 2]);
 	}
-	// for (int i = 0; i <= N; i++) cout << dp[i] << " ";
-	// cout << endl;
 	cout << dp[N] << endl;
 	return 0;
 }
