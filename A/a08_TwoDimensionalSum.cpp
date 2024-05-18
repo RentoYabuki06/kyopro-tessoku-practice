@@ -35,14 +35,6 @@ int main()
 			cum[i][j] += cum[i - 1][j];
 		}
 	}
-	// for (int i = 1; i <= H; i++)
-	// {
-	// 	for (int j = 1; j <= W; j++)
-	// 	{
-	// 		cout << cum[i][j];
-	// 	}
-	// 	cout << endl;
-	// }
 	for (int i = 1; i <= Q; i++)
 	{
 		int sum = 0;

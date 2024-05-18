@@ -11,8 +11,6 @@ int main()
 	for (int i = 0; i < Q; i++) cin >> L[i] >> R[i];
 	cum[0] = A[0];
 	for (int i = 1; i < N; i++) cum[i] = cum[i - 1] + A[i];
-	// for (int i = 0; i < N; i++) cout << cum[i] << endl;
-	// cout << "cum" << endl;
 	for (int i = 0; i < Q; i++)
 	{
 		if (L[i] == 1)

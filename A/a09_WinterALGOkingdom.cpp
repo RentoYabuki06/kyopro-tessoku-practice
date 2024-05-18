@@ -21,11 +21,6 @@ int main()
 		dots[C[i] + 1][B[i]]--;
 		dots[C[i] + 1][D[i] + 1]++;
 	}
-	// for (int i = 1; i <= H; i++)
-	// {
-	// 	for (int j = 1; j <= W; j++) cout << dots[i][j];
-	// 	cout << endl;
-	// }
 	for (int i = 1; i <= H; i++)
 	{
 		for (int j = 1; j <= W; j++) dots[i][j] += dots[i][j - 1];
