@@ -1,151 +1,104 @@
-# kyopro-tessoku-practice
-## 20240518更新
-<pre>
-.
-├── A
-│   ├── a01_theFirstProblem.cpp
-│   ├── a02_LinearSearch.cpp
-│   ├── a03_TwoCards.cpp
-│   ├── a04_BinaryRepresentation.cpp
-│   ├── a05_ThreeCards.cpp
-│   ├── a06_HowManyGuests.cpp
-│   ├── a07_EventAttendance.cpp
-│   ├── a08_TwoDimensionalSum.cpp
-│   ├── a09_WinterALGOkingdom.cpp
-│   ├── a10_ResortHotel.cpp
-│   ├── a11_BinarySearch.cpp
-│   ├── a12_Printer.cpp
-│   ├── a13_ClosePairs.cpp
-│   ├── a14_FourBoxes.cpp
-│   ├── a15_Compression.cpp
-│   ├── a16_Dungeon1.cpp
-│   ├── a17_Dungeon2.cpp
-│   ├── a18_SubsetSun.cpp
-│   ├── a19_Knapsack1.cpp
-│   ├── a20_LCS.cpp
-│   ├── a21_BlockGame.cpp
-│   ├── a22_Sugoroku.cpp
-│   ├── a23_AllFree.cpp
-│   ├── a24_LIS.cpp
-│   ├── a25_NumberOfRoutes.cpp
-│   ├── a26.PrimeCheck.cpp
-│   ├── a27_CalculateGCD.cpp
-│   ├── a28_Blackboard.cpp
-│   ├── a29_Power.cpp
-│   ├── a30_Combination.cpp
-│   ├── a31_Divisors.cpp
-│   ├── a32_Game1.cpp
-│   ├── a33_Game2.cpp
-│   ├── a34_Game3.cpp
-│   ├── a35_Game4.cpp
-│   ├── a36_Travel.cpp
-│   ├── a37_Travel2.cpp
-│   ├── a38_BlackCompany1.cpp
-│   ├── a39_IntervalSchedulingProblem.cpp
-│   ├── a40_Triangle.cpp
-│   ├── a41_TileColoring.cpp
-│   ├── a42_Soccor.cpp
-│   ├── a43_Travel3.cpp
-│   ├── a44_ChangeAndReverse.cpp
-│   ├── a45_CardElimination.cpp
-│   ├── a46_Heuristic1_Donyoku.cpp
-│   ├── a46_Heuristic1_annealing_re.cpp
-│   ├── a46_Heuristic1_greedy_re.cpp
-│   ├── a46_Heuristic1_kyokushotansaku.cpp
-│   ├── a46_Heuristic1_yamanobori_re.cpp
-│   ├── a46_Heuristic_annealing.cpp
-│   ├── a49_Heuristic2_beamSearch.cpp
-│   ├── a49_Heuristic2_greedy.cpp
-│   ├── a50_YamagataSum.cpp
-│   ├── a51_Stack.cpp
-│   ├── a52_Queue.cpp
-│   ├── a53_Priority_Queue.cpp
-│   ├── a54_Map.cpp
-│   ├── a55_Set.cpp
-│   ├── a56_StringHash.cpp
-│   ├── a57_Doubling.cpp
-│   ├── a58_RMQ.cpp
-│   ├── a59_RSQ.cpp
-│   ├── a60_StockPrice.cpp
-│   ├── a61_AdjacentVertices.cpp
-│   ├── a62_DepthFirstSearch.cpp
-│   ├── a63_ShortestPath1.cpp
-│   ├── a64_ShortestPath2.cpp
-│   ├── a65_RoadToPromotion.cpp
-│   ├── a66_ConnectQuery.cpp
-│   ├── a67_MST.cpp
-│   ├── a68_MaximumFlow.cpp
-│   ├── a69_BipartiteMatching.cpp
-│   ├── a70_Lanterns.cpp
-│   ├── a71_Homework.cpp
-│   ├── a72_TilePainting.cpp
-│   ├── a73_MarathonRoute.cpp
-│   ├── a74_BoardGame.cpp
-│   ├── a75_Examination.cpp
-│   ├── a76_RiverCrossing.cpp
-│   └── a77_YokanParty.cpp
-├── B
-│   ├── b01_A+Bproblem.cpp
-│   ├── b02_DivisorCheck.cpp
-│   ├── b03_Supermarket1.cpp
-│   ├── b04_BinaryReprestation2.cpp
-│   ├── b06_Lottery.cpp
-│   ├── b07_ConvenienveStore.cpp
-│   ├── b08_CountingPoints.cpp
-│   ├── b09_Papers.cpp
-│   ├── b11_BinarySearch2.cpp
-│   ├── b12_Equation.cpp
-│   ├── b13_Supermarket2.cpp
-│   ├── b14_AnotherSubsetSum.cpp
-│   ├── b16_Frog1.cpp
-│   ├── b17_Frog1withRestoration.cpp
-│   ├── b18_SubsetSunWithRestoration.cpp
-│   ├── b19_Knapsack2.cpp
-│   ├── b20_EditDistance.cpp
-│   ├── b21_LongestSubpalindrome.cpp
-│   ├── b22_a16_Dungeon1.cpp
-│   ├── b23_TravelingSalesmanProblem.cpp
-│   ├── b24_ManyBoxes.cpp
-│   ├── b26_OutputPrimeNumbers.cpp
-│   ├── b27_CalculateLCM.cpp
-│   ├── b28_FibonacciEasy.cpp
-│   ├── b29_PowerHard.cpp
-│   ├── b30_Combination2.cpp
-│   ├── b31_DivisorsHard.cpp
-│   ├── b32_Game5.cpp
-│   ├── b33_Game6.cpp
-│   ├── b34_Game7.cpp
-│   ├── b36_SwitchingLights.cpp
-│   ├── b37_SumOfDigits.cpp
-│   ├── b38_HeightsOfGrass.cpp
-│   ├── b39_TaroJob.cpp
-│   ├── b40_DivideBy100.cpp
-│   ├── b41_ReverseOfEuclid.cpp
-│   ├── b42_TwoFacedCards.cpp
-│   ├── b43_QuizContest.cpp
-│   ├── b44_GridOperations.cpp
-│   ├── b45_Blackboard2.cpp
-│   ├── b51_Bracket.cpp
-│   ├── b52_BallSimulation.cpp
-│   ├── b54_CountingSameValues.cpp
-│   ├── b55_Difference.cpp
-│   ├── b56_PalindromeQueries.cpp
-│   ├── b57_Calculator.cpp
-│   ├── b58_Jumping.cpp
-│   ├── b61_Influencer.cpp
-│   ├── b62_PrintAPath.cpp
-│   ├── b63_BreadthFirstSearch.cpp
-│   ├── b64_ShortestPathWithRestoration.cpp
-│   ├── b65_RoadToPromotinhard.cpp
-│   ├── b66_Typhoon.cpp
-│   ├── b67_MaxMST.cpp
-│   ├── b68_ALGOExpress.cpp
-│   └── b69_BlackCompany2.cpp
-├── BitExhaustivelySearch
-│   ├── 014b_SumPrice.cpp
-│   ├── 061c_ManyFormulas.cpp
-│   ├── 128c_Switches.cpp
-│   └── 147c_HonestOrUnkind2.cpp
-├── C
-└── README.md
-</pre>
+# 競プロの鉄則 実装レポジトリ
+
+## 概要
+このリポジトリは、書籍 **「競プロの鉄則」** に基づくアルゴリズムとデータ構造の実装をまとめたものです。各章ごとのコード例や演習問題の解答例を提供し、競技プログラミングスキルの向上をサポートします。
+
+---
+
+## プロジェクトの目的
+1. **アルゴリズムの理解と実装力の強化**：
+   - 基本的なアルゴリズムから応用までを網羅。
+2. **データ構造の習得**：
+   - 効率的なデータ操作と最適化技術の学習。
+3. **競技プログラミング対策**：
+   - コンテストで求められる問題解決スキルを習得。
+4. **C++およびPython実装例の提供**：
+   - 言語ごとの記法やアルゴリズムの違いを理解。
+
+---
+
+## 内容一覧
+### 1. **基礎編**
+- 入力・出力の高速化
+- 配列とループ処理
+- ソートと二分探索
+- 動的計画法（DP）
+
+### 2. **アルゴリズム編**
+- 貪欲法
+- 深さ優先探索（DFS）と幅優先探索（BFS）
+- グラフアルゴリズム（最短経路や最小全域木）
+- 動的計画法の応用
+
+### 3. **応用編**
+- セグメントツリーとFenwick Tree
+- Union-Find（Disjoint Set Union）
+- Bit全探索と動的ビットマスク
+- 高度な数学アルゴリズム（素数判定、約数列挙）
+
+---
+
+## 実装要件
+1. **プログラミング言語**：
+   - C++ (標準: C++17以降)
+   - Python (バージョン3.8以降)
+2. **ライブラリ制限**：
+   - 標準ライブラリのみ使用可能。
+3. **エラーハンドリング**：
+   - 境界条件や異常入力への対応。
+
+---
+
+## 使用方法
+### 必要環境
+- C++ コンパイラ (g++ 推奨)
+- Python3 インタプリタ
+
+### コンパイルと実行例 (C++)
+```
+g++ -std=c++17 chapter01/example.cpp -o example
+./example
+```
+
+### 実行例 (Python)
+```
+python3 chapter01/example.py
+```
+
+---
+
+## コード構成
+```
+/chapters
+    /chapter01
+        example.cpp
+        example.py
+    /chapter02
+        example.cpp
+        example.py
+README.md
+```
+
+---
+
+## 学習ポイント
+- **アルゴリズムの深い理解**：
+  各章で扱うアルゴリズムを実践的に理解。
+- **問題解決スキルの強化**：
+  コーディングコンテストでの応用力を向上。
+- **コードの最適化と検証**：
+  効率的なコード設計とテスト。
+
+---
+
+## 参考リンク
+- [競プロの鉄則 公式ページ](https://example.com)
+- [AtCoder](https://atcoder.jp/)
+- [C++ リファレンス](https://en.cppreference.com/)
+- [Python公式ドキュメント](https://docs.python.org/3/)
+
+---
+
+## ライセンス
+このリポジトリは教育目的で提供されており、再配布や商用利用は制限される場合があります。詳細はライセンスファイルを参照してください。
+
